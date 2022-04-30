@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Quiz from "./components/Quiz";
 export default function App() {
 	let [starting, setStarting] = React.useState(false);
@@ -33,7 +33,7 @@ export default function App() {
 												? e.target.value.slice(0, e.target.value.length - 1)
 												: e.target.value,
 										validity:
-											e.target.value >= 1 || !e.target.validity.patternMismatch,
+											e.target.value >= 1 && !e.target.validity.patternMismatch,
 									}));
 								}}
 								required={true}

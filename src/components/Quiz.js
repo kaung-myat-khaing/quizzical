@@ -88,6 +88,7 @@ export default function Quiz(props) {
 				type="button"
 				className="inter btn btn-accent btn-sm"
 				onClick={() => {
+					ALL_ANSWERS = []; //EMPTY ANSWER ARRAY FOR NEW GAME
 					setReady(false);
 					props.setStarting(false);
 				}}
