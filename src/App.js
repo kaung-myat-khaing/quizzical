@@ -32,8 +32,7 @@ export default function App() {
 											e.target.value.indexOf("0") === 0
 												? e.target.value.slice(0, e.target.value.length - 1)
 												: e.target.value,
-										validity:
-											e.target.value >= 1 && !e.target.validity.patternMismatch,
+										validity: e.target.value >= 1 && e.target.validity.valid,
 									}));
 								}}
 								required={true}
