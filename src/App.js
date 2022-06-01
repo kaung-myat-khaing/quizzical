@@ -18,7 +18,7 @@ export default function App() {
 							I would like to try{" "}
 							<input
 								type="number"
-								min="1"
+								min="5"
 								max="20"
 								maxLength="2"
 								name="amount"
@@ -32,14 +32,14 @@ export default function App() {
 											e.target.value.indexOf("0") === 0
 												? e.target.value.slice(0, e.target.value.length - 1)
 												: e.target.value,
-										validity: e.target.value >= 1 && e.target.validity.valid,
+										validity: e.target.value >= 5 && e.target.validity.valid,
 									}));
 								}}
 								required={true}
 							></input>{" "}
 							{questionNoun}{" "}
 							<span className="input-constraint-info">
-								Choose between 1 and 20.
+								Choose between 5 and 20.
 							</span>
 						</label>
 
